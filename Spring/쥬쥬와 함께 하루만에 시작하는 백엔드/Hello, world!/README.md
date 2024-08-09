@@ -137,4 +137,4 @@ public class TestApi {
 - 이 메서드는 `TestResponseBody` 객체를 반환한다. Spring Boot는 이 객체를 JSON 형식으로 변환하여 클라이언트에게 응답으로 보낸다.
 - `TestResponseBody` 클래스는 `name`과 `age` 필드를 가지고 있으며, 해당 필드 값을 포함하는 JSON 객체로 변환된다.
 - getter 메서드를 사용하여 객체의 필드 값을 읽어 JSON으로 변환한다. 따라서, `getName()`과 `getAge()` 메서드는 JSON 변환 과정에서 필드의 값을 읽어오는 데 사용된다.
-- 예를 들어 `TestResponseBody` 객체가 `new TestResponseBody("김찬영", 23)`로 생성되면, JSON 변환 과정에서 `getName()`, `getAge() 메서드가 호출되어 `"김찬영"`, `23` 값을 읽어온다. 결과적으로 `{"name": "김찬영", "age": 23}`이 반환된다.
+- 예를 들어 `TestResponseBody` 객체가 `new TestResponseBody("김찬영", 23)`로 생성되면, JSON 변환 과정에서 `getName()`, `getAge()` 메서드가 호출되어 `"김찬영"`, `23` 값을 읽어온다. 결과적으로 `{"name": "김찬영", "age": 23}`이 반환된다.
