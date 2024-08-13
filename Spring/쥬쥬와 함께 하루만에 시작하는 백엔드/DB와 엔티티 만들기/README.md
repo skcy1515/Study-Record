@@ -39,3 +39,37 @@ public class TestLombokApi {
 }
 ```
 @Getter, @AllArgsConstructor 어노테이션 덕분에 생성자와 getter 메서드를 따로 추가하지 않아도 된다.
+
+# H2 데이터베이스와 JPA 추가하기
+- `H2 데이터베이스` : 데이터베이스의 역할을 담당하며, 데이터를 저장하고 조회하는 시스템이다. H2는 개발과 테스트 환경에서 유용한 경량 데이터베이스로 자주 사용된다.
+- `JPA` : H2 데이터베이스와 연결하여 자바 객체와 데이터베이스의 테이블 간의 매핑을 처리한다. JPA를 사용하면 자바 클래스와 데이터베이스 테이블 간의 데이터 변환을 자동으로 처리할 수 있다.
+```
+// build.gradle
+
+dependencies {
+  ...
+  implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+  runtimeOnly 'com.h2database:h2'
+  ...
+}
+```
+```
+// application.properties
+
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+
+spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.url=jdbc:h2:mem:rss
+spring.datasource.username=sa
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.show-sql=true
+```
+buil.gradle에 의존성 코드 추가하고, src -> main -> resources -> application.properties 파일에 위에 코드를 추가한다.
+
+![image](https://github.com/user-attachments/assets/7e738bfe-4eea-4182-9a48-07fe9060e88c)
+
+![image](https://github.com/user-attachments/assets/76f74456-1791-484e-9dc7-405e94673f65)
+
+이후 localhost:8080/h2-console 에 들어가서 JDBC URL은 `jdbc:h2:mem:rss`, User Name은 `sa`로 해주고 접속하여 정상적으로 들어가지는지 확인한다.
+
