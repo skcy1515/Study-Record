@@ -1,3 +1,4 @@
+# JPA 방식
 # 설정 추가하기
 build.gradle에 코드 추가
 ```
@@ -84,3 +85,8 @@ public class TestQueryApi {
 }
 ```
 
+![image](https://github.com/user-attachments/assets/71f2d138-b1f6-4e4b-a331-4685d1640045)
+
+이후 postman에 들어가서 찬영이라는 이름으로 create를 해주고 http://localhost:8080/test/query/jpa 를 통해 쿼리가 되는지 확인한다.
+
+# Querydsl 방식
