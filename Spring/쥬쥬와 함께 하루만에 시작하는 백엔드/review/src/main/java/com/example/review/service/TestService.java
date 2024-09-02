@@ -5,6 +5,8 @@ import com.example.review.repository.TestRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @AllArgsConstructor
 @Service
 public class TestService {
@@ -24,5 +26,9 @@ public class TestService {
         TestEntity testEntity = testRepository.findById(id).orElseThrow();
         testEntity.changeNameAndAge(name, age);
         testRepository.save(testEntity);
+    }
+
+    public List<TestEntity> findAllByNameByJPA(String name) {
+        return testRepository.findAllByName(name);
     }
 }
