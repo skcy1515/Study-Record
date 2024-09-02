@@ -17,4 +17,9 @@ public class TestQueryApi {
     public List<TestEntity> queryJpa() {
         return testService.findAllByNameByJPA("찬영");
     }
+
+    @GetMapping("/test/query/querydsl")
+    public List<TestEntity> queryQuerydsl() {
+        return testService.findAllByNameByQuerydsl("찬영");
+    }
 }
