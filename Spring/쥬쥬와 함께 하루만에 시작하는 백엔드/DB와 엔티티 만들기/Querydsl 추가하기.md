@@ -90,3 +90,42 @@ public class TestQueryApi {
 이후 postman에 들어가서 찬영이라는 이름으로 create를 해주고 http://localhost:8080/test/query/jpa 를 통해 쿼리가 되는지 확인한다.
 
 # Querydsl 방식
+# TestRepositoryCustom
+코드 추가
+```
+public interface TestRepositoryCustom {
+
+    public List<TestEntity> findAllByNameByQuerydsl(String name);
+}
+```
+
+# TestRepositoryImpl
+코드 추가
+```
+public class TestRepositoryImpl implements TestRepositoryCustom{
+    private final JPAQueryFactory queryFactory;
+
+    @Override
+    public List<TestEntity> findAllByNameByQuerydsl(String name) {
+        return queryFactory.selectFrom(QTestEntity.testEntity)
+                .fetch();
+    }
+}
+```
+- ` queryFactory.selectFrom(QTestEntity.testEntity)` : QueryDSL을 사용하여 TestEntity의 모든 레코드를 선택하는 쿼리를 만든다. QTestEntity는 QueryDSL이 생성한 클래스이다.
+- `.fetch()` : 쿼리를 실행하고 결과를 리스트로 반환한다.
+
+# TestService, TestQueryApi
+코드 추가
+```
+    public List<TestEntity> findAllByNameByQuerydsl(String name){
+        return testRepository.findAllByNameByQuerydsl(name);
+    }
+```
+
+```
+    @GetMapping("/test/query/querydsl")
+    public List<TestEntity> queryQuerydsl() {
+        return testService.findAllByNameByQuerydsl("찬영");
+    }
+```
