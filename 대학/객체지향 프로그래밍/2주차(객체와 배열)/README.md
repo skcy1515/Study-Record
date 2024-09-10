@@ -33,3 +33,14 @@ strArray[3] = “int”;
 객체 : 클래스의 필드에 대한 메모리 영역이 할당된 것
 
 메소드: 객체.메소드()로 호출되는 함수
+
+### 클래스 배열
+```
+// 배열 변수 선언
+Student stList[];
+
+// 학생수를 입력해 배열 생성
+System.out.print("학생 수: ");
+int n = scan.nextInt();
+stList[] = new Student[n];
+```
