@@ -10,8 +10,8 @@ https://start.spring.io/ 접속하여
 이후 설정 -> 프로젝트 구조에서 아마존 corretto로 SDK 버전을 설정해준다.
 
 # HTTP Method
+[TestApi](https://github.com/skcy1515/Study-Record/blob/main/Spring/%EC%A5%AC%EC%A5%AC%EC%99%80%20%ED%95%A8%EA%BB%98%20%ED%95%98%EB%A3%A8%EB%A7%8C%EC%97%90%20%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94%20%EB%B0%B1%EC%97%94%EB%93%9C/review/src/main/java/com/example/review/api/TestApi.java)
 ```
-// TestApi
 @RestController
 public class TestApi {
 
@@ -40,8 +40,8 @@ public class TestApi {
 - `Get`, `Post`, `Put`, `Delete` : 각각 HTTP 요청을 `/hello/world` 경로로 받을 때 호출된다.
 
 # Request Param
+[TestRequestApi](https://github.com/skcy1515/Study-Record/blob/main/Spring/%EC%A5%AC%EC%A5%AC%EC%99%80%20%ED%95%A8%EA%BB%98%20%ED%95%98%EB%A3%A8%EB%A7%8C%EC%97%90%20%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94%20%EB%B0%B1%EC%97%94%EB%93%9C/review/src/main/java/com/example/review/api/TestRequestApi.java)
 ```
-    // TestRequestApi
     // Request Parameter 방식
     @GetMapping("/test/param")
     public String requestParam(
@@ -56,8 +56,8 @@ public class TestApi {
 - 예를 들어, 요청 URL이 `/test/param?name=John&age=30`이라면, `name`은 `"John"`, `age`는 `30`이 되어 문자열 `"Hello, Request Param, I am John, 30"`을 반환한다.
 
 # Path Variable
+[TestRequestApi](https://github.com/skcy1515/Study-Record/blob/main/Spring/%EC%A5%AC%EC%A5%AC%EC%99%80%20%ED%95%A8%EA%BB%98%20%ED%95%98%EB%A3%A8%EB%A7%8C%EC%97%90%20%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94%20%EB%B0%B1%EC%97%94%EB%93%9C/review/src/main/java/com/example/review/api/TestRequestApi.java)
 ```
-    // TestRequestApi
     // Path Variable 방식
     @GetMapping("/test/path/{name}/{age}")
     public String requestPathVariable(
@@ -72,8 +72,8 @@ public class TestApi {
 - 예를 들어, 요청 URL이 `/test/path/John/30`이라면, `name`은 `"John"`, `age`는 `30`이 되어 문자열 `"Hello, Path Variable, I am John, 30"`을 반환한다.
 
 # Request Body
+[TestRequestApi](https://github.com/skcy1515/Study-Record/blob/main/Spring/%EC%A5%AC%EC%A5%AC%EC%99%80%20%ED%95%A8%EA%BB%98%20%ED%95%98%EB%A3%A8%EB%A7%8C%EC%97%90%20%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94%20%EB%B0%B1%EC%97%94%EB%93%9C/review/src/main/java/com/example/review/api/TestRequestApi.java)
 ```
-    // TestRequestApi
     // Request Body 방식
     @PostMapping("/test/body")
     public String requestBody(
@@ -99,8 +99,8 @@ public class TestApi {
 - 예를 들어, 요청 본문이 JSON 형식인 `{"name": "John", "age": 30}`이라면, `name`은 `"John"`, `age`는 `30`이 되어 문자열 `"Hello, Request Body, I am John, 30"`을 반환한다.
 
 # Response Body
+[TestResponseApi](https://github.com/skcy1515/Study-Record/blob/main/Spring/%EC%A5%AC%EC%A5%AC%EC%99%80%20%ED%95%A8%EA%BB%98%20%ED%95%98%EB%A3%A8%EB%A7%8C%EC%97%90%20%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94%20%EB%B0%B1%EC%97%94%EB%93%9C/review/src/main/java/com/example/review/api/TestResponseApi.java)
 ```
-    // TestResponseApi
     // Response Body 방식
     @GetMapping("/test/response/string")
     public String stringResponse() {
