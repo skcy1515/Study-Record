@@ -41,6 +41,8 @@
 
 ```
 
+[기존코드](https://github.com/skcy1515/Study-Record/blob/main/%EB%8C%80%ED%95%99/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/1%EC%A3%BC%EC%B0%A8/Week1My.java)
+
 개선할 점: static 쓰지 않기, main 메소드에 코드 줄이고, 함수 더 만들기
 
 개선 코드 아웃라인
@@ -105,3 +107,5 @@ public class MyMain_1_HW_A {
 	}
 }
 ```
+
+[개선 코드](https://github.com/skcy1515/Study-Record/blob/main/%EB%8C%80%ED%95%99/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/1%EC%A3%BC%EC%B0%A8/Week1My2.java)
