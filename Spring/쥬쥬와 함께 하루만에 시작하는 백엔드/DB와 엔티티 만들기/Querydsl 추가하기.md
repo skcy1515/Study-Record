@@ -13,7 +13,7 @@ dependencies {
 ```
 
 # QuerydslConfig
-com.example.review 패키지에 QuerydslConfig 클래스 추가
+com.example.review 패키지에 [QuerydslConfig](https://github.com/skcy1515/Study-Record/blob/main/Spring/%EC%A5%AC%EC%A5%AC%EC%99%80%20%ED%95%A8%EA%BB%98%20%ED%95%98%EB%A3%A8%EB%A7%8C%EC%97%90%20%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94%20%EB%B0%B1%EC%97%94%EB%93%9C/review/src/main/java/com/example/review/QuerydslConfig.java) 클래스 추가
 ```
 @RequiredArgsConstructor
 @Configuration
@@ -33,7 +33,7 @@ public class QuerydslConfig {
 - `public JPAQueryFactory queryFactory()` : 이 메서드는 JPAQueryFactory 객체를 생성하여 반환한다. JPAQueryFactory는 Querydsl에서 쿼리를 생성할 때 사용하는 핵심 클래스다. 생성자에 EntityManager를 전달하여 JPA와의 연동을 가능하게 한다.
 
 # TestRepositoryImpl, TestRepositoryCustom
-repository 패키지에 각각 TestRepositoryImpl 클래스, TestRepositoryCustom 인터페이스를 만들어준다
+repository 패키지에 각각 [TestRepositoryImpl](https://github.com/skcy1515/Study-Record/blob/main/Spring/%EC%A5%AC%EC%A5%AC%EC%99%80%20%ED%95%A8%EA%BB%98%20%ED%95%98%EB%A3%A8%EB%A7%8C%EC%97%90%20%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94%20%EB%B0%B1%EC%97%94%EB%93%9C/review/src/main/java/com/example/review/repository/TestRepositoryImpl.java) 클래스, [TestRepositoryCustom](https://github.com/skcy1515/Study-Record/blob/main/Spring/%EC%A5%AC%EC%A5%AC%EC%99%80%20%ED%95%A8%EA%BB%98%20%ED%95%98%EB%A3%A8%EB%A7%8C%EC%97%90%20%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94%20%EB%B0%B1%EC%97%94%EB%93%9C/review/src/main/java/com/example/review/repository/TestRepositoryCustom.java) 인터페이스를 만들어준다
 ```
 @RequiredArgsConstructor
 @Repository
@@ -52,7 +52,7 @@ public interface TestRepositoryCustom {
 ```
 
 # TestService, TestRepository
-TestService 클래스와 TestRepository 인터페이스에 코드를 추가해준다
+[TestService](https://github.com/skcy1515/Study-Record/blob/main/Spring/%EC%A5%AC%EC%A5%AC%EC%99%80%20%ED%95%A8%EA%BB%98%20%ED%95%98%EB%A3%A8%EB%A7%8C%EC%97%90%20%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94%20%EB%B0%B1%EC%97%94%EB%93%9C/review/src/main/java/com/example/review/service/TestService.java) 클래스와 [TestRepository](https://github.com/skcy1515/Study-Record/blob/main/Spring/%EC%A5%AC%EC%A5%AC%EC%99%80%20%ED%95%A8%EA%BB%98%20%ED%95%98%EB%A3%A8%EB%A7%8C%EC%97%90%20%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94%20%EB%B0%B1%EC%97%94%EB%93%9C/review/src/main/java/com/example/review/repository/TestRepository.java) 인터페이스에 코드를 추가해준다
 ```
     public List<TestEntity> findAllByNameByJPA(String name) {
         return testRepository.findAllByName(name);
@@ -71,7 +71,7 @@ public interface TestRepository extends JpaRepository<TestEntity, Long>, TestRep
 - `public List<TestEntity> findAllByName(String name);` : 이 메서드는 name이라는 문자열 매개변수를 받아서, 그 이름과 일치하는 TestEntity 객체들의 리스트를 반환한다.
 
 # TestQueryApi
-api 패키지에 TestQueryApi 클래스를 생성해준다.
+api 패키지에 [TestQueryApi](https://github.com/skcy1515/Study-Record/blob/main/Spring/%EC%A5%AC%EC%A5%AC%EC%99%80%20%ED%95%A8%EA%BB%98%20%ED%95%98%EB%A3%A8%EB%A7%8C%EC%97%90%20%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94%20%EB%B0%B1%EC%97%94%EB%93%9C/review/src/main/java/com/example/review/api/TestQueryApi.java) 클래스를 생성해준다.
 ```
 @RequiredArgsConstructor
 @RestController
