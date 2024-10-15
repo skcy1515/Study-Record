@@ -1,6 +1,5 @@
 package lecture7;
 
-
 import mgr.Manageable;
 
 import java.util.ArrayList;
