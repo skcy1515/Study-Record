@@ -35,7 +35,7 @@ public class RestaurantApi {
     }
 }
 ```
-api 패키지에 RestaurantApi 클래스를 생성하고 여러 api 들을 정의해준다.
+api 패키지에 [RestaurantApi](https://github.com/skcy1515/Study-Record/blob/main/Spring/%EB%A7%9B%EC%A7%91%20%EB%A6%AC%EB%B7%B0%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EA%B0%9C%EB%B0%9C%ED%95%98%EA%B8%B0/restaurant/src/main/java/com/example/restaurant/api/RestaurantApi.java) 클래스를 생성하고 여러 api 들을 정의해준다.
 
 `@PathVariable` 어노테이션은 URL 경로에서 변수 값을 추출하여 메서드 매개변수로 바인딩한다.
 
@@ -51,7 +51,7 @@ POST /restaurant
   ]
 }
 ```
-API Spec 대로 CreateAndEditRestaurantRequest 클래스와 CreateAndEditRestaurantRequestMenu 클래스를 정의해준다.
+API Spec 대로 [CreateAndEditRestaurantRequest](https://github.com/skcy1515/Study-Record/blob/main/Spring/%EB%A7%9B%EC%A7%91%20%EB%A6%AC%EB%B7%B0%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EA%B0%9C%EB%B0%9C%ED%95%98%EA%B8%B0/restaurant/src/main/java/com/example/restaurant/api/request/CreateAndEditRestaurantRequest.java) 클래스와 [CreateAndEditRestaurantRequestMenu](https://github.com/skcy1515/Study-Record/blob/main/Spring/%EB%A7%9B%EC%A7%91%20%EB%A6%AC%EB%B7%B0%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EA%B0%9C%EB%B0%9C%ED%95%98%EA%B8%B0/restaurant/src/main/java/com/example/restaurant/api/request/CreateAndEditRestaurantRequestMenu.java) 클래스를 정의해준다.
 
 ```
 @Getter
