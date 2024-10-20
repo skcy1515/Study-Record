@@ -1,5 +1,6 @@
 package com.example.restaurant.api;
 
+import com.example.restaurant.api.request.CreateAndEditRestaurantRequest;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -18,15 +19,19 @@ public class RestaurantApi {
     }
 
     @PostMapping("/restaurant")
-    public String createRestaurant() {
-        return "This is createRestaurant";
+    public String createRestaurant(
+            @RequestBody CreateAndEditRestaurantRequest request
+    ) {
+        return "This is createRestaurant, name=" + request.getName() + ", address=" + request.getAddress() +
+                ", menu[0].name=" + request.getMenus().get(0).getName() + ", menu[0].price=" + request.getMenus().get(0).getPrice();
     }
 
     @PutMapping("/restaurant/{restaurantId}")
     public String editRestaurant(
-            @PathVariable Long restaurantId
+            @PathVariable Long restaurantId,
+            @RequestBody CreateAndEditRestaurantRequest request
     ) {
-        return "This is editRestaurant, " + restaurantId;
+        return "This is editRestaurant, " + restaurantId + ", name=" + request.getName() + ", address=" + request.getAddress();
     }
 
     @DeleteMapping("/restaurant/{restaurantId}")
